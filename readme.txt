@@ -1,0 +1,1 @@
+the main file (index.html) in the dist folder

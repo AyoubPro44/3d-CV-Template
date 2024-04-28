@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'PT Sans';
+}
+
+.title {
+    text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+
+}
+
+.container {
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+        /* shadow ring 👇 */
+        0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+        0 3.5px 6px hsla(0, 0%, 0%, 0.09),
+        0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+}
+
+.DivCont3d {
+    perspective: 500px;
+}
+
+.infosBox {
+    position: relative;
+    transform: rotateY(-15deg);
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+    animation: up-and-down 2.5s linear infinite;
+}
+
+.imgcont {
+    perspective: 500px;
+}
+
+.education {
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+    transform: rotateY(-10deg);
+    position: relative;
+    opacity: 0;
+}
+
+.experiences {
+    position: relative;
+    right: -120px;
+    animation: right-to-left1 1.2s ease-in-out forwards;
+}
+
+.education:first-of-type {
+    right: -120px;
+}
+
+.education:nth-of-type(2) {
+    right: -100px;
+}
+
+.education:last-of-type {
+    right: -80px;
+}
+
+.active .education:first-of-type {
+    animation: right-to-left1 0.7s ease-in-out forwards;
+}
+
+.active .education:nth-of-type(2) {
+    animation: right-to-left2 0.7s ease-in-out forwards;
+}
+
+.active .education:last-of-type {
+    animation: right-to-left3 0.7s ease-in-out forwards;
+}
+
+
+.skill {
+    transform: rotateY(8deg);
+}
+
+img {
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+    position: relative;
+    background-color: #111111;
+    left: 10px;
+    background-image: url("../images/Elon_Musk.jpg");
+    background-size: cover;
+    transform: rotateY(10deg);
+    border: 2px solid #4746FF;
+    animation: up-and-down 2.5s linear infinite;
+}
+
+.hobbie {
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.reveal.section,
+.reveal .title {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.reveal.active .hobbie,
+.reveal.section.active,
+.reveal.active .title {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.active .progressSkill {
+    opacity: 0;
+    animation: progress 1s ease-in-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes right-to-left1 {
+    0% {
+        opacity: 0;
+        right: -120px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes right-to-left2 {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes right-to-left3 {
+    0% {
+        opacity: 0;
+        right: -80px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes up-and-down {
+
+    0%,
+    100% {
+        top: 30px;
+    }
+
+    50% {
+        top: 10px;
+    }
+}
+
+@media print {
+    * {
+        text-shadow: none !important;
+        box-shadow: none !important;
+        animation: none !important;
+    }
+
+    .DivCont3d {
+        perspective: none !important;
+    }
+
+    .imgcont {
+        perspective: none;
+    }
+
+    .experiences {
+        position: relative;
+        right: 0;
+    }
+
+    .education {
+        position: relative;
+        left: 0;
+        opacity: 1;
+        transform: none;
+    }
+
+    .reveal.section,
+    .reveal .title {
+        position: relative;
+        transform: none;
+        opacity: 1;
+    }
+
+    .progressSkill {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+
+    .skill {
+        transform: none;
+        opacity: 1;
+    }
+
+    .hobbie {
+        position: relative;
+        transform: none;
+        opacity: 1;
+    }
+
+    .progressSkill {
+        animation: none !important;
+        opacity: 1;
+        -webkit-print-color-adjust: exact !important;
+    }
+}
