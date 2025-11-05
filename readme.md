@@ -1,100 +1,100 @@
 
-# 3D CV Template  
-Un modèle de CV interactif en 3D prêt à personnaliser, idéal pour se démarquer avec un CV original et immersif.
+# 3D CV Template  
+An interactive 3D CV template ready to personalize, perfect for standing out with a unique and immersive resume.
 
-## Table des matières  
-1. [Présentation](#présentation)  
-2. [Fonctionnalités](#fonctionnalités)  
-3. [Technologies utilisées](#technologies‑utilisées)  
-4. [Installation & utilisation](#installation‑utilisation)  
-5. [Personnalisation](#personnalisation)  
-6. [Déploiement](#déploiement)  
-7. [Structure du projet](#structure‑du‑projet)  
+## Table of Contents  
+1. [Overview](#overview)  
+2. [Features](#features)  
+3. [Technologies Used](#technologies-used)  
+4. [Installation & Usage](#installation-usage)  
+5. [Customization](#customization)  
+6. [Deployment](#deployment)  
+7. [Project Structure](#project-structure)  
 8. [Contribution](#contribution)  
-9. [Licence](#licence)  
+9. [License](#license)  
 10. [Contact](#contact)  
 
-## Présentation  
-Le modèle « 3D CV Template » propose une présentation originale de votre profil professionnel comme jamais auparavant : un environnement 3D dynamique dans lequel vos compétences, expériences et données de contact sont mises en valeur de façon immersive.
+## Overview  
+The "3D CV Template" offers an original way to present your professional profile: a dynamic 3D environment where your skills, experience, and contact information are showcased immersively.
 
-## Fonctionnalités  
-- Présentation visuelle en 3D de vos informations : expérience, formation, compétences, contact.  
-- Navigation intuitive ou mode « visite guidée ».  
-- Design responsive : accessible sur desktop et mobile.  
-- Facilité de personnalisation (texte, couleurs, éléments 3D).  
-- Export ou partage web (hébergement statique possible).  
-- Compatibilité multiplateforme (navigateur moderne requis).
+## Features  
+- 3D visual presentation of your information: experience, education, skills, contact.  
+- Intuitive navigation or "guided tour" mode.  
+- Responsive design: accessible on both desktop and mobile.  
+- Easy customization (text, colors, 3D elements).  
+- Export or web sharing (static hosting possible).  
+- Cross-platform compatibility (modern browser required).
 
-## Technologies utilisées  
+## Technologies Used  
 - HTML5 & CSS3  
-- JavaScript (et/ou un framework JS tel que Three.js pour la 3D)  
-- Outils de build (ex. webpack, Vite) – à adapter selon ton projet  
-- (Optionnel) Assets 3D (modèles .glb/.gltf) et textures
+- JavaScript (and/or a JS framework like Three.js for 3D)  
+- Build tools (e.g., webpack, Vite) – adjust according to your project  
+- (Optional) 3D assets (models .glb/.gltf) and textures
 
-## Installation & utilisation  
-1. Clonez le dépôt :  
+## Installation & Usage  
+1. Clone the repository:  
    ```bash  
-   git clone https://github.com/AyoubPro44/3d‑CV‑Template.git  
-   cd 3d‑CV‑Template  
+   git clone https://github.com/AyoubPro44/3d-CV-Template.git  
+   cd 3d-CV-Template  
    ```  
-2. Installez les dépendances (si applicable) :  
+2. Install dependencies (if applicable):  
    ```bash  
    npm install  
    ```  
-3. Lancez le serveur de développement :  
+3. Run the development server:  
    ```bash  
    npm run dev  
    ```  
-   ou selon le script défini.  
-4. Ouvrez votre navigateur à l’adresse : `http://localhost:3000` (ou le port défini) pour voir le modèle.  
-5. Personnalisez le contenu (voir section « Personnalisation ») et déployez quand vous êtes prêt.
+   or according to your defined script.  
+4. Open your browser at: `http://localhost:3000` (or the defined port) to view the template.  
+5. Customize the content (see "Customization" section) and deploy when you're ready.
 
-## Personnalisation  
-- Modifiez les fichiers de données (ex : `data.json`, `config.js`) pour adapter vos informations (nom, expériences, compétences, contact).  
-- Remplacez les modèles ou textures 3D dans le dossier `assets/3d/`.  
-- Ajustez les couleurs, typographies, animations via les fichiers CSS/JS.  
-- Prévisualisez localement avant de déployer.
+## Customization  
+- Modify data files (e.g., `data.json`, `config.js`) to adapt your information (name, experience, skills, contact).  
+- Replace 3D models or textures in the `assets/3d/` folder.  
+- Adjust colors, typography, animations via CSS/JS files.  
+- Preview locally before deploying.
 
-## Déploiement  
-Le modèle est conçu pour être hébergé en tant que site statique :  
-- Exportez la version de production :  
+## Deployment  
+The template is designed to be hosted as a static site:  
+- Export the production version:  
   ```bash  
   npm run build  
   ```  
-- Déployez les fichiers du dossier `dist/` (ou `build/`) sur un hébergeur statique (GitHub Pages, Netlify, Vercel…).  
-- Mettez à jour le lien de votre CV et partagez‑le de façon originale.
+- Deploy the files from the `dist/` (or `build/`) folder to a static host (GitHub Pages, Netlify, Vercel…).  
+- Update your CV link and share it uniquely.
 
-## Structure du projet  
+## Project Structure  
 ```
-/3d‑CV‑Template  
+/3d-CV-Template  
 │  
-├─ /assets/              # modèles 3D, textures, images  
-├─ /src/                 # code source (JS/TS, styles)  
+├─ /assets/              # 3D models, textures, images  
+├─ /src/                 # source code (JS/TS, styles)  
 │     ├─ components/  
-│     ├─ data/            # fichiers de contenu modifiable  
+│     ├─ data/            # modifiable content files  
 │     └─ styles/  
-├─ /public/              # fichiers statiques  
+├─ /public/              # static files  
 ├─ .env.example  
 ├─ package.json  
 ├─ README.md  
 └─ index.html  
 ```  
-*(Adaptez selon votre structure réelle.)*
+*(Adjust according to your actual structure.)*
 
 ## Contribution  
-Les contributions sont les bienvenues !  
-1. Fork ce dépôt.  
-2. Crée une branche `feature/ma‑nouvelle‑fonctionnalité`.  
-3. Commit tes modifications (`git commit ‑m "Ajout de …"`).  
-4. Push vers ta branche (`git push`).  
-5. Ouvre une Pull Request.  
-Merci d’indiquer clairement les changements et les tests associés.  
+Contributions are welcome!  
+1. Fork this repository.  
+2. Create a branch `feature/my-new-feature`.  
+3. Commit your changes (`git commit -m "Added …"`).  
+4. Push to your branch (`git push`).  
+5. Open a Pull Request.  
+Please clearly indicate the changes and tests associated.
 
-## Licence  
-Ce projet est sous licence [MIT](LICENSE) – voir le fichier `LICENSE` pour plus d’informations.  
+## License  
+This project is licensed under the [MIT](LICENSE) – see the `LICENSE` file for more information.
 
 ## Contact  
-Pour toute question, suggestion ou bug :  
-Souad Ait Bellauali (aussi connu sous le nom **SHINIGAMI**)  
-Email : ayyoubboulahri@gmail.com
-GitHub : [https://github.com/AyoubPro44](https://github.com/AyoubPro44)  
+For any questions, suggestions, or bugs:  
+Souad Ait Bellauali (also known as **SHINIGAMI**)  
+Email: ayyoubboulahri@gmail.com  
+GitHub: [https://github.com/AyoubPro44](https://github.com/AyoubPro44)  
